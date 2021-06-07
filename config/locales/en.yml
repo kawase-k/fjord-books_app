@@ -30,4 +30,36 @@
 # available at https://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  # 追加した翻訳
+  errors:
+    template:
+      header:
+        one: "There was an error in the %{model}"
+        other: "%{count}error prohibited this %{model} from being saved:"
+  views:
+    books:
+      index:
+        Books: "Books"
+        title: "title"
+        memo: "memo"
+        author: "author"
+        picture: "picture"
+        show: "show"
+        edit: "edit"
+        destroy: "destroy"
+        Are you sure?: "Are you sure?"
+        New Book: "New Book"
+      new:
+        New Book: "New Book"
+        Back: "Back"
+      show:
+        Title: "Title"
+        Memo: "Memo"
+        Author: "Author"
+        Picture: "Picture"
+        Edit: "Edit"
+        Back: "Back"
+      edit:
+        EditingBook: "EditingBook"
+        Show: "Show"
+        Back: "Back"
