@@ -212,7 +212,7 @@ ja:
     show: "閲覧"
     edit: "編集"
     destroy: "削除"
-    are_you_sure?: "削除してもよろしいですか？"
+    are_you_sure: "削除してもよろしいですか？"
     to_add: "追加する"
     new_book: "新しい本"
     back: "戻る"

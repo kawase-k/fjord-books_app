@@ -41,7 +41,7 @@ en:
     show: "Show"
     edit: "Edit"
     destroy: "Destroy"
-    are_you_sure?: "Are you sure?"
+    are_you_sure: "Are you sure?"
     to_add: "New Book"
     new_book: "New Book"
     back: "Back"
