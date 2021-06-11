@@ -1,16 +1,13 @@
 ja:
   activerecord:
     models:
-      book: 本  #g
+      book: 本
 
     attributes:
       book:
-        title: タイトル  #g
-        memo: メモ  #g
-        author: 著者  #g
-        picture: 画像  #g
-      notice:
-        Book was successfully created: "本の作成をしました！"
-        Book was successfully updated: "本の更新ができました！"
-        Book was successfully destroyed: "本の削除をしました！"
+        title: タイトル
+        memo: メモ
+        author: 著者
+        picture: 画像
+      
 

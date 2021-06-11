@@ -208,29 +208,16 @@ ja:
 
   # 追加した翻訳
   views:
-    books:
-      index:
-        Books: "書籍一覧"
-        title: "タイトル"
-        memo: "メモ"
-        author: "著者"
-        picture: "画像"
-        show: "閲覧"
-        edit: "編集"
-        destroy: "削除"
-        Are you sure?: "削除してもよろしいですか？"
-        New Book: "追加する"
-      new:
-        New Book: "新しい本"
-        Back: "戻る"
-      show:
-        Title: "タイトル"
-        Memo: "メモ"
-        Author: "著者"
-        Picture: "画像"
-        Edit: "編集"
-        Back: "戻る"
-      edit:
-        EditingBook: "本の編集"
-        Show: "閲覧"
-        Back: "戻る"
+    books: "書籍一覧"
+    show: "閲覧"
+    edit: "編集"
+    destroy: "削除"
+    are_you_sure?: "削除してもよろしいですか？"
+    to_add: "追加する"
+    new_book: "新しい本"
+    back: "戻る"
+    editing_book: "本の編集"
+  notice:
+    created: "本の作成をしました！"
+    updated: "本の更新ができました！"
+    destroyed: "本の削除をしました！"

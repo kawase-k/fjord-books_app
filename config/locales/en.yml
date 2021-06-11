@@ -37,29 +37,16 @@ en:
         one: "There was an error in the %{model}"
         other: "%{count}error prohibited this %{model} from being saved:"
   views:
-    books:
-      index:
-        Books: "Books"
-        title: "title"
-        memo: "memo"
-        author: "author"
-        picture: "picture"
-        show: "show"
-        edit: "edit"
-        destroy: "destroy"
-        Are you sure?: "Are you sure?"
-        New Book: "New Book"
-      new:
-        New Book: "New Book"
-        Back: "Back"
-      show:
-        Title: "Title"
-        Memo: "Memo"
-        Author: "Author"
-        Picture: "Picture"
-        Edit: "Edit"
-        Back: "Back"
-      edit:
-        EditingBook: "EditingBook"
-        Show: "Show"
-        Back: "Back"
+    books: "Book"
+    show: "Show"
+    edit: "Edit"
+    destroy: "Destroy"
+    are_you_sure?: "Are you sure?"
+    to_add: "New Book"
+    new_book: "New Book"
+    back: "Back"
+    editing_book: "Editing Book"
+  notice:
+    created: "Book was successfully created!"
+    updated: "Book was successfully updated!"
+    destroyed: "Book was successfully destroyed!"
