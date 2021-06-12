@@ -1,5 +1,7 @@
-<p>名前 : <%= @user.name %></p>
-<p>郵便番号 : <%= @user.postal_code %></p>
-<p>住所 : <%= @user.address %></p>
-<p>自己紹介 : <%= @user.description %></p>
-<p>メールアドレス : <%= @user.email %></p>
+<p><%= User.human_attribute_name(:name) %> : <%= @user.name %></p>
+<p><%= User.human_attribute_name(:postal_code) %> : <%= @user.postal_code %></p>
+<p><%= User.human_attribute_name(:address) %> : <%= @user.address %></p>
+<p><%= User.human_attribute_name(:description) %> : <%= @user.description %></p>
+<p><%= User.human_attribute_name(:email) %> : <%= @user.email %></p>
+
+<%= link_to t('views.common.back'), books_path %>
