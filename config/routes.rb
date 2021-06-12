@@ -3,7 +3,7 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  resources :users, only: [:show]
+  resources :users
   resources :books
 
   root to: "books#index"

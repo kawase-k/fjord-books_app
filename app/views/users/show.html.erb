@@ -4,4 +4,5 @@
 <p><%= User.human_attribute_name(:description) %> : <%= @user.description %></p>
 <p><%= User.human_attribute_name(:email) %> : <%= @user.email %></p>
 
-<%= link_to t('views.common.back'), books_path %>
+<%= link_to t('devise.shared.links.back'), :back %>
+<%= link_to '本一覧へ', books_path %>
