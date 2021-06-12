@@ -36,6 +36,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'devise-i18n'
   gem 'faker'
   gem 'i18n_generators'
   gem 'listen', '~> 3.3'
@@ -44,7 +45,6 @@ group :development do
   gem 'rubocop-rails', require: false
   gem 'spring'
   gem 'web-console', '>= 4.1.0'
-  gem 'devise-i18n'
 end
 
 group :test do
