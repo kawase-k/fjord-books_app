@@ -3,8 +3,10 @@ Rails.application.routes.draw do
     registrations: 'users/registrations'
   }
 
-  resources :users
+  resources :users, only: [:index, :show]
   resources :books
 
   root to: "books#index"
+  
+  mount LetterOpenerWeb::Engine, at: '/letter_opener' if Rails.env.development?
 end
