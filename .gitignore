@@ -42,15 +42,3 @@ yarn-debug.log*
 
 /public/uploads/*
 .env
-
-# 不要なファイルをコミットしないように設定
-/app/assets/stylesheets/books.scss
-/app/assets/stylesheets/users.scss
-
-/test/*
-!/test
-
-app/controllers/users/*
-!app/controllers/users/registrations_controller.rb
-
-/app/views/books/*.jbuilder
