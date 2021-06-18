@@ -216,6 +216,8 @@ ja:
       title_new: "%{name}の新規作成"
       title_edit: "%{name}の編集"
       my_page: "マイページ"
+      edit_user: "プロフィール編集"
+      logout: "ログアウト"
       users_page: "ユーザ一覧"
     pagination:
       first: '最初'

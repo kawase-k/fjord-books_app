@@ -14,8 +14,8 @@
       <% if user_signed_in? %>
         <%= User.model_name.human %> : <strong><%= current_user.email %></strong>.
         <%= link_to t('views.common.my_page'), user_path(current_user.id), class: 'navbar-link' %> |
-        <%= link_to t('devise.shared.links.edit'), edit_user_registration_path, class: 'navbar-link' %> |
-        <%= link_to t('devise.shared.links.logout'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
+        <%= link_to t('views.common.edit_user'), edit_user_registration_path, class: 'navbar-link' %> |
+        <%= link_to t('views.common.logout'), destroy_user_session_path, method: :delete, class: 'navbar-link'  %>
       <% else %>
         <%= link_to t('devise.shared.links.sign_up'), new_user_registration_path, class: 'navbar-link'  %> |
         <%= link_to t('devise.shared.links.sign_in'), new_user_session_path, class: 'navbar-link'  %>
