@@ -219,6 +219,8 @@ ja:
       sign_out: ログアウト
       minimum_length: "%{length}文字以上"
       datetime: 投稿日
+      posted_user: 投稿者
+      no_comments: コメントはありません
     pagination:
       first: '最初'
       last: '最後'

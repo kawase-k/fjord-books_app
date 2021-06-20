@@ -1,3 +1,5 @@
+<h1><%= t('views.common.title_show', name: Report.model_name.human) %></h1>
+
 <p>
   <strong><%= Report.human_attribute_name(:title) %>:</strong>
   <%= @report.title %>
@@ -8,6 +10,16 @@
   <%= @report.content %>
 </p>
 
+<p>
+  <strong><%= t('views.common.datetime') %>:</strong>
+  <%= l(@report.created_at.in_time_zone('Asia/Tokyo'), format: :short) %>
+</p>
+
+<p>
+  <strong><%= t('views.common.posted_user') %>:</strong>
+  <%= @report.user.name %>
+</p>
+
 <% if current_user == @report.user  %>
   <%= link_to t('views.common.edit'), edit_report_path(@report) %> |
 <% else %>
@@ -15,3 +27,6 @@
   <td></td>
 <% end %>
 <%= link_to t('views.common.back'), reports_path %>
+
+<%= render partial: 'comments/comments', locals: {commentable: @report} %>
+<%= render partial: 'comments/form', locals: {commentable: @report} %>
