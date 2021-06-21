@@ -1,15 +1,16 @@
 <h2><%= Comment.model_name.human %></h2>
+
 <% if commentable.comments.empty? %>
   <%= t('views.common.no_comments') %>
 <% else %>
-  <% commentable.comments.includes(:user).each do |comment| %>
+  <% commentable.comments.each do |comment| %>
     <p>
       <%= t('views.common.datetime') %>:
       <%= l(comment.created_at.in_time_zone('Asia/Tokyo'), format: :short) %>
     </p>
 
     <p>
-      <%= User.model_name.human %>:
+      <%= t('views.common.posted_user') %>:
       <% if comment.user.name.empty? %>
         <%= link_to comment.user.email, comment.user %>
       <% else %>
@@ -21,5 +22,7 @@
       <%= Comment.human_attribute_name(:body) %>:
       <%= comment.body %>
     </p>
+
+    <hr width="400" align='left'>
   <% end %>  
-<% end %>  
+<% end %>
