@@ -6,7 +6,7 @@
   <% commentable.comments.each do |comment| %>
     <p>
       <%= t('views.common.datetime') %>:
-      <%= l(comment.created_at.in_time_zone('Asia/Tokyo'), format: :short) %>
+      <%= comment.created_at.to_s(:datetime_jp) %>
     </p>
 
     <p>

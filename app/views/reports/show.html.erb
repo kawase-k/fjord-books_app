@@ -12,7 +12,7 @@
 
 <p>
   <strong><%= t('views.common.datetime') %>:</strong>
-  <%= l(@report.created_at.in_time_zone('Asia/Tokyo'), format: :short) %>
+  <%= @report.created_at.to_s(:datetime_jp) %>
 </p>
 
 <p>

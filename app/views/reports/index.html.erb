@@ -16,7 +16,7 @@
       <tr>
         <td><%= report.title %></td>
         <td><%= report.content %></td>
-        <td><%= l(report.created_at.in_time_zone('Asia/Tokyo'), format: :short) %></td>
+        <td><%= report.created_at.to_s(:datetime_jp) %></td>
         <td><%= report.user.name %></td>
         <td><%= link_to t('views.common.show'), report %></td>
         <% if current_user == report.user  %>
