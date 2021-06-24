@@ -145,6 +145,8 @@ ja:
       create: 登録する
       submit: 保存する
       update: 更新する
+      follow: フォローする
+      unfollow: フォロー解除
   number:
     currency:
       format:
@@ -218,6 +220,8 @@ ja:
       title_show: "%{name}の詳細"
       sign_out: ログアウト
       minimum_length: "%{length}文字以上"
+      followings: フォロー一覧
+      followers: フォロワー一覧
     pagination:
       first: '最初'
       last: '最後'
