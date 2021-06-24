@@ -1,0 +1,8 @@
+<p><%= User.human_attribute_name(:name) %> : <%= @user.name %></p>
+<p><%= User.human_attribute_name(:postal_code) %> : <%= @user.postal_code %></p>
+<p><%= User.human_attribute_name(:address) %> : <%= @user.address %></p>
+<p><%= User.human_attribute_name(:description) %> : <%= @user.description %></p>
+<p><%= User.human_attribute_name(:email) %> : <%= @user.email %></p>
+
+<%= link_to t('views.common.back'), books_path %>
+<%= link_to t('views.common.users_page'), users_path %>
