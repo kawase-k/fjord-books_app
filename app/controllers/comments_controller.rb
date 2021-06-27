@@ -6,15 +6,18 @@ class CommentsController < ApplicationController
   def create
     @comment = @commentable.comments.new(comment_params)
     @comment.user = current_user
-    @comment.save
+    @comment.save!
     redirect_to @commentable, notice: t('controllers.common.notice_create', name: Comment.model_name.human)
   end
 
   private
 
   def set_commentable
-    resource, id = request.path.split('/')[1, 2]
-    @commentable = resource.singularize.classify.constantize.find(id)
+    resource, params[:id] = request.path.split('/')[1, 2]
+
+    if resource == "books" || resource == "reports"
+      @commentable = resource.singularize.classify.constantize.find(params[:id])
+    end
   end
 
   def comment_params

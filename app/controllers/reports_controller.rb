@@ -17,7 +17,13 @@ class ReportsController < ApplicationController
   end
 
   # GET /reports/1/edit
-  def edit; end
+  def edit
+    if @report.user_id == current_user.id
+      render :edit
+    else
+      redirect_to reports_path
+    end
+  end
 
   # POST /reports or /reports.json
   def create
@@ -42,8 +48,12 @@ class ReportsController < ApplicationController
 
   # DELETE /reports/1 or /reports/1.json
   def destroy
-    @report.destroy
-    redirect_to reports_url, notice: t('controllers.common.notice_destroy', name: Report.model_name.human)
+    if @report.user_id == current_user.id
+      @report.destroy
+      redirect_to reports_url, notice: t('controllers.common.notice_destroy', name: Report.model_name.human)
+    else
+      redirect_to reports_path
+    end
   end
 
   private
