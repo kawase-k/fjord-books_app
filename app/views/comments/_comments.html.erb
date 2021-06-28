@@ -1,0 +1,28 @@
+<h2><%= Comment.model_name.human %></h2>
+
+<% if commentable.comments.empty? %>
+  <%= t('views.common.no_comments') %>
+<% else %>
+  <% commentable.comments.each do |comment| %>
+    <p>
+      <%= t('views.common.datetime') %>:
+      <%= comment.created_at.to_s(:datetime_jp) %>
+    </p>
+
+    <p>
+      <%= t('views.common.posted_user') %>:
+      <% if comment.user.name.empty? %>
+        <%= link_to comment.user.email, comment.user %>
+      <% else %>
+        <%= link_to comment.user.name, comment.user %>
+      <% end %>
+    </p>
+
+    <p>
+      <%= Comment.human_attribute_name(:body) %>:
+      <%= comment.body %>
+    </p>
+
+    <hr width="400" align='left'>
+  <% end %>  
+<% end %>
