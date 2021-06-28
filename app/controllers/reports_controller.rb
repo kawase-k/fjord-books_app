@@ -39,10 +39,13 @@ class ReportsController < ApplicationController
 
   # PATCH/PUT /reports/1 or /reports/1.json
   def update
-    if @report.update(report_params)
+    if @report.user_id == current_user.id
+      @report.update(report_params)
       redirect_to @report, notice: t('controllers.common.notice_update', name: Report.model_name.human)
-    else
+    elsif current_user
       render :edit, status: :unprocessable_entity
+    else
+      redirect_to reports_path
     end
   end
 

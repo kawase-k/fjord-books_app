@@ -17,6 +17,8 @@ class CommentsController < ApplicationController
 
     if resource == "books" || resource == "reports"
       @commentable = resource.singularize.classify.constantize.find(params[:id])
+    else
+      head :not_found # 404
     end
   end
 
