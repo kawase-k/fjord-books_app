@@ -3,18 +3,21 @@
 require 'test_helper'
 
 class ReportTest < ActiveSupport::TestCase
-  test '#editable?' do
-    user = User.create!(email: 'user@exeample.com', password: 'password')
-    report = Report.create!(user: user, title: '初日報', content: 'よろしくお願いいたします')
+  setup do
+    @user   = User.create!(email: 'user@exeample.com', password: 'password')
+    @report = Report.create!(user: @user, title: '初日報', content: 'よろしくお願いいたします')
+  end
 
-    assert report.editable?(user)
+  test '#editable?' do
+    assert @user.valid?
+    assert @report.valid?
+    assert @report.editable?(@user)
   end
 
   test '#created_on' do
-    user = User.create!(email: 'user@exeample.com', password: 'password')
-    report = Report.create!(user: user, title: '初日報', content: 'よろしくお願いいたします')
-
-    assert report.created_on
-    assert_not_equal report, report.created_on
+    assert @user.valid?
+    assert @report.valid?
+    assert @report.created_on
+    assert_not_equal @report, @report.created_on
   end
 end
