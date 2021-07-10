@@ -8,6 +8,27 @@ class UserTest < ActiveSupport::TestCase
     @she = User.create!(email: 'she@example.com', password: 'password')
   end
 
+  test '#followings' do
+    assert @me.valid?
+    assert @she.valid?
+    @me.follow(@she)
+    assert_equal @me.followings.first, @she
+  end
+
+  test '#followers' do
+    assert @me.valid?
+    assert @she.valid?
+    @she.follow(@me)
+    assert_equal @me.followers.first, @she
+  end
+
+  test '#following?' do
+    assert @me.valid?
+    assert @she.valid?
+    @me.follow(@she)
+    assert @me.following?(@she)
+  end
+
   test '#followed_by?' do
     assert @me.valid?
     assert @she.valid?
