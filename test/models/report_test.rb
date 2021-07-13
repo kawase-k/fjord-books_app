@@ -9,14 +9,10 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#editable?' do
-    assert @user.valid?
-    assert @report.valid?
     assert @report.editable?(@user)
   end
 
   test '#created_on' do
-    assert @user.valid?
-    assert @report.valid?
     assert @report.created_on
     assert_not_equal @report, @report.created_on
   end
