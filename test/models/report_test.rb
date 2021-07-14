@@ -13,7 +13,7 @@ class ReportTest < ActiveSupport::TestCase
   end
 
   test '#created_on' do
-    assert @report.created_on
+    assert @report.created_on.present?
     assert_not_equal @report, @report.created_on
   end
 end
