@@ -47,7 +47,7 @@ class ReportsTest < ApplicationSystemTestCase
 
   test 'destroying a Report' do
     visit reports_url
-    page.accept_confirm do
+    accept_confirm do
       click_on '削除'
     end
 
